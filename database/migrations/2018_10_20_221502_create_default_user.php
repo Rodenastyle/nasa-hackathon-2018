@@ -13,7 +13,10 @@ class CreateDefaultUser extends Migration
      */
     public function up()
     {
-        //
+        factory(\App\User::class)->create([
+	        'email' => 'test@test.com',
+	        'password' => bcrypt('test')
+        ]);
     }
 
     /**
@@ -23,6 +26,6 @@ class CreateDefaultUser extends Migration
      */
     public function down()
     {
-        //
+        \App\User::where('email', 'test@test.com')->first()->forceDelete();
     }
 }

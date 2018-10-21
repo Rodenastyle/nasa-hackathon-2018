@@ -55,7 +55,27 @@
                     </div>
                 </div>
             </nav>
-            @yield('content')
+            <div class="container">
+                <div class="columns" style="margin-top: 2em">
+                    <div class="column is-2">
+                        <h2 class="has-text-primary">You helped finding <span class="tag">253.698</span> helpless humans by resolving <span class="tag">49</span> puzzles!   🎉🎉🎉</h2>
+                        <aside class="menu" style="margin-top: 2em">
+                            <p class="menu-label">
+                                General
+                            </p>
+                            <ul class="menu-list">
+                                <li><a href="{{ route('game') }}">Play the game</a></li>
+                            </ul>
+                            <ul class="menu-list">
+                                <li><a>Scoreboard</a></li>
+                            </ul>
+                        </aside>
+                    </div>
+                    <div class="column is-10">
+                        @yield('content')
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Scripts -->
